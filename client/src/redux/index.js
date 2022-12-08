@@ -6,7 +6,7 @@ const themeReducer = createSlice({
   initialState,
   name: "theme",
   reducers: {
-    setMode: (state, action) => {
+    setMode: (state) => {
       state.mode = state.mode === "light" ? "dark" : "light";
     },
   },
