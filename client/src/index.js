@@ -4,10 +4,10 @@ import "./index.css";
 import App from "./App";
 import { configureStore } from "@reduxjs/toolkit";
 import { Provider } from "react-redux";
-import themeReducer from "redux/index";
+import globalReducer from "redux/index";
 const store = configureStore({
   reducer: {
-    theme: themeReducer,
+    theme: globalReducer,
   },
 });
 const root = ReactDOM.createRoot(document.getElementById("root"));

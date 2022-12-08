@@ -1,15 +1,16 @@
 import { createSlice } from "@reduxjs/toolkit";
 const initialState = {
   mode: "dark",
+  userId: "63701cc1f03239b7f700000e",
 };
-const themeReducer = createSlice({
+const globalReducer = createSlice({
   initialState,
-  name: "theme",
+  name: "global",
   reducers: {
     setMode: (state) => {
       state.mode = state.mode === "light" ? "dark" : "light";
     },
   },
 });
-export default themeReducer.reducer;
-export const { setMode } = themeReducer.actions;
+export default globalReducer.reducer;
+export const { setMode } = globalReducer.actions;
