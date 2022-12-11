@@ -11,7 +11,10 @@ import managementRoutes from "./routes/management.js";
 import salesRoutes from "./routes/sales.js";
 //data imports
 import User from "./models/User.js";
+import Product from "./models/Product.js";
+import ProductStat from "./models/ProductStat.js";
 import { dataUser } from "./data/data.js";
+import { dataProduct, dataProductStat } from "./data/data.js";
 /* Configurations */
 dotenv.config();
 const app = express();
@@ -41,6 +44,8 @@ mongoose
     app.listen(PORT, () => {
       console.log(`lestining to the port: ${PORT}`);
       // User.insertMany(dataUser);
+      // Product.insertMany(dataProduct);
+      // ProductStat.insertMany(dataProductStat);
     });
   })
   .catch((error) => {
