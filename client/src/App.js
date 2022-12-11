@@ -8,9 +8,8 @@ import Layout from "pages/layout/Layout";
 import Dashboard from "pages/dashboard/Dashboard";
 
 function App() {
-  const { mode } = useSelector((state) => state.theme);
+  const mode = useSelector((state) => state.global.mode);
   const theme = useMemo(() => createTheme(themeSettings(mode)), [mode]);
-  console.log(mode);
   return (
     <div className="app">
       <BrowserRouter>
